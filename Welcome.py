@@ -18,7 +18,6 @@ import traceback
 import sys
 from discord.ext.commands import Bot
 from discord_components import *
-from decouple import config
 
 BOT_TOKEN = config('BOT_TOKEN')
 intents = discord.Intents.default()
