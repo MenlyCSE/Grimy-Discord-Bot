@@ -297,7 +297,7 @@ bot.load_extension('cogs.ErrorCog')
 bot.load_extension('cogs.AdminCogs')
 bot.load_extension('cogs.SearchCog')
 
-bot.run('ODM5MjA5MjU2ODIwNTM5NDAy.YJGUhg.EaEr2koDq4z1aURI1YASB_gGrp8')
+bot.run(os.getenv('BOT_TOKEN'))
 
 #member.avatar_url
 #ctx.guild.member
