@@ -1,0 +1,14 @@
+discord
+bs4
+pymongo
+modules
+pysafebrowsing
+timeout
+backend
+youtube-dl
+emoji
+pycog3
+pip
+google
+flask
+discord-componenets
