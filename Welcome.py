@@ -19,7 +19,6 @@ import sys
 from discord.ext.commands import Bot
 from discord_components import *
 
-BOT_TOKEN = config('BOT_TOKEN')
 intents = discord.Intents.default()
 intents.members = True
 bot = commands.Bot(command_prefix=BOT_PREFIX, intents=discord.Intents.all())
