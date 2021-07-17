@@ -22,13 +22,6 @@ GaGreetings = ["Good afternoon"]
 Grimys = ["What am I your maid?", "Nope!", "Not doing that bud.", "Goodluck with that LOL!", "My Q to run!", "Yikes...", "Would you look at that? I'm out of time!", "Bye bye I'ma go now :)", "Nooooooooo", "XD", "Peace", "No way jose!", "Imagine!", "LOL", "When your so lonely you start talking to a bot.", "How about you go spend 2 hours outside :)", "Use `$cmds` if you actually need something.", "No more poptarts for you!", "Feed me some bytes please!", "Lol you actually mentioned my name!", "I stopped listening 5 hours ago...", "How about you duck tape your keyboards?", "I am currently doing something!!", "Let's adress the elephant in the room. Why say my name?", "I know your IP adress :)", "Pennywise had fun last saturday!", "How about we end this conversation?"]
 lols = ["Did I hear someone talking about the boss man?", "He is watching you :))", "He is currently going super sayian right now.", "Wait till you hear this @Milky!", "He is currently buying icecream for everyone!", "Did you mention him?", "MWHAHAHA, he will murder you!", "He is killing defualt cubes right now B)", "I'm still waiting for him to feed me bytes."]
 
-embed18 = discord.Embed(
-  title = "Arcane's level system is currently down!",
-  colour = discord.Colour.red()
-)
-
-embed18.set_image(url="https://media.discordapp.net/attachments/788968211307692053/865745473347125248/unknown.png?width=559&height=453")
-
 class SearchCog(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
@@ -91,9 +84,6 @@ class SearchCog(commands.Cog):
 
       if "Inculpable" in message.content:
         await message.channel.send(f'**{random.choice(lols)}**')
-
-      if "aleaderboard" in message.content:
-        await message.channel.send(embed=embed18)
         
 
 def setup(bot):
