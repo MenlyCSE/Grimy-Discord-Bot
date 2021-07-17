@@ -12,7 +12,23 @@ from googlesearch import search
 import traceback
 import sys
 
-badwords = ["$search sex","$search porn","$search fuck","$search pornography","$search hentai","$search ass","$search dick","$search poop","$search shit","$search wtf","$search what the fuck","$search drug","$search nigg","$search nigga","$search fuk","$search cunt","$search cnut","$search d1ck","$search pussy","$search asswhole","$search b1tch","$search bitch","$search b!tch","$search blowjob","$search cock","$search c0ck","$search jack off","$search ejackulate","$search masterbait","$search penis","$search vaginia","$search penis","$search xvideo","$search xnxx","$search xhamster","$search tinder","search booty", "$search ecchi"]
+badwords = [
+    "$search sex", "$search porn", "$search fuck", "$search pornography",
+    "$search hentai", "$search ass", "$search dick", "$search poop",
+    "$search shit", "$search wtf", "$search what the fuck", "$search drug",
+    "$search nigg", "$search nigga", "$search fuk", "$search cunt",
+    "$search cnut", "$search d1ck", "$search pussy", "$search asswhole",
+    "$search b1tch", "$search bitch", "$search b!tch", "$search blowjob",
+    "$search cock", "$search c0ck", "$search jack off", "$search ejackulate",
+    "$search masterbait", "$search penis", "$search vaginia", "$search penis",
+    "$search xvideo", "$search xnxx", "$search xhamster", "$search tinder",
+    "$search booty", "$search porn hub", "$search onlyfans",
+    "$search only fans", "$search pOrn hub", "$search p0rn hub",
+    "$search Only fans", "$search 0nly fans", "$search Onlyfans",
+    "$search 0nlyfans", "$search t!nder", "$search cOck", "search mutherfuker",
+    "$search pornmemes"
+]
+
 grimy = ["grimy"]
 inculpable = ["inculpable"]
 
