@@ -26,7 +26,7 @@ badwords = [
     "$search only fans", "$search pOrn hub", "$search p0rn hub",
     "$search Only fans", "$search 0nly fans", "$search Onlyfans",
     "$search 0nlyfans", "$search t!nder", "$search cOck", "$search mutherfuker",
-    "$search pornmemes","$search fock"
+    "$search pornmemes","$search fock", "$search softporn", "$search eechi"
 ]
 
 grimy = ["grimy"]
