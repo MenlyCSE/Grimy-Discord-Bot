@@ -13,6 +13,8 @@ import traceback
 import sys
 
 badwords = ["$search sex","$search porn","$search fuck","$search pornography","$search hentai","$search ass","$search dick","$search poop","$search shit","$search wtf","$search what the fuck","$search drug","$search nigg","$search nigga","$search fuk","$search cunt","$search cnut","$search d1ck","$search pussy","$search asswhole","$search b1tch","$search bitch","$search b!tch","$search blowjob","$search cock","$search c0ck","$search jack off","$search ejackulate","$search masterbait","$search penis","$search vaginia","$search penis","$search xvideo","$search xnxx","$search xhamster","$search tinder","search booty", "$search ecchi"]
+grimy = ["grimy"]
+inculpable = ["inculpable"]
 
 Greetings = ["Hello","Hi","Greetings","Howdy","Hello there","Sup"]
 UnGreetings = ["Bye, Bye","Cya","GoodBye"]
@@ -73,17 +75,12 @@ class SearchCog(commands.Cog):
       if message.content.startswith('$sup'):
         await message.channel.send(f' **{random.choice(Greetings)}** '+ message.author.mention +"!")
 
-      if "Grimy" in message.content:
+      if any(word in message.content.lower() for word in grimy):
         await message.channel.send(f'**{random.choice(Grimys)}**')
       
-      if "grimy" in message.content:
-        await message.channel.send(f'**{random.choice(Grimys)}**')
-
-      if "inculpable" in message.content:
+      if any(word in message.content.lower() for word in inculpable):
         await message.channel.send(f'**{random.choice(lols)}**')
 
-      if "Inculpable" in message.content:
-        await message.channel.send(f'**{random.choice(lols)}**')
         
 
 def setup(bot):
