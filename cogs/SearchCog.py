@@ -47,7 +47,7 @@ class SearchCog(commands.Cog):
   @commands.Cog.listener()
   async def on_message(self, message):
     if any(word in message.content.lower() for word in badwords):
-      await message.channel.send("**Keep searches family friendly!**")
+      await message.channel.send("**Keep searches family friendly!**", delete_after=6)
       await message.delete()
     else:
       if message.content.startswith('$search'):
