@@ -27,7 +27,7 @@ embed18 = discord.Embed(
   colour = discord.Colour.red()
 )
 
-embed18.set_image(url="https://media.discordapp.net/attachments/788968211307692053/862132759618650162/unknown.png?width=444&height=453")
+embed18.set_image(url="https://media.discordapp.net/attachments/788968211307692053/865744873219293194/unknown.png?width=529&height=453")
 
 class SearchCog(commands.Cog):
   def __init__(self, bot):
