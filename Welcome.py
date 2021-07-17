@@ -32,11 +32,12 @@ async def on_ready():
 
 @bot.listen()
 async def on_message(message):
+    badwordresponse = ["Family friendly server!", "We don't use that language here!", "Watch your language!", "Language!"]
     badwords2 = ["sex","porn","fuck","pornography","hentai","ass","dick","shit","what the fuck","drug","nigg"," nigga","fuk","cunt","cnut","d1ck","pussy","asswhole","b1tch","bitch","b!tch","blowjob","cock","c0ck","jack off","ejackulate","masterbait","penis","vaginia","penis","xvideo","xnxx","xhamster","tinder","booty", "ecchi", "nude", "nudse"]
     content = message.content.lower()
     if any(word in content for word in badwords2):
         await message.delete()
-        msg = await message.channel.send(f'{message.author.mention} **Family friendly server!**')
+        msg = await message.channel.send(f'{message.author.mention} **{random.choice(badwordresponse)}**')
         await asyncio.sleep(6)
         await msg.delete()
 
