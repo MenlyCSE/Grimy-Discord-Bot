@@ -55,6 +55,16 @@ async def on_message(message):
         await asyncio.sleep(6)
         await msg.delete()
         
+@bot.listen()
+async def on_message(message):
+    badwordresponse = ["Family friendly server!", "We don't use that language here!", "Watch your language!", "Language!"]
+    content = message.content.lower()
+    if message.content == 'Ass':
+        await message.delete()
+        msg = await message.channel.send(f'{message.author.mention} **{random.choice(badwordresponse)}**')
+        await asyncio.sleep(6)
+        await msg.delete()
+        
 @bot.event
 async def on_member_join(member):
     try:
