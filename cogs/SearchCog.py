@@ -51,8 +51,7 @@ class SearchCog(commands.Cog):
     if any(word in message.content.lower() for word in badwords):
       await message.channel.send("**Keep searches family friendly!**", delete_after=6)
       await message.delete()
-    else:
-      if message.content.startswith('$search'):
+    elif message.content.startswith('$search'):
           searchContent = ""
           text = str(message.content).split(' ')
           await message.channel.send(f'🔎 **{random.choice(sWord)}**')
@@ -60,6 +59,8 @@ class SearchCog(commands.Cog):
             searchContent = searchContent + text[i]
           for j in search(searchContent, tld="co.in", num=1, stop=1, pause=2):
             await message.channel.send(j)
+    else:
+        await message.channel.send("Error")
             
       if message.content.startswith('$hello'):
         await message.channel.send(f' **{random.choice(Greetings)}** '+ message.author.mention +"!")
