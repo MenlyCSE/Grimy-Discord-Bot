@@ -53,7 +53,7 @@ class SearchCog(commands.Cog):
       if message.content.startswith('$search'):
           searchContent = ""
           text = str(message.content).split(' ')
-          await message.channel.send(🔎 **Searching!**)
+          await message.channel.send('🔎 **Searching!**')
           for i in range(1, len(text)):
             searchContent = searchContent + text[i]
           for j in search(searchContent, tld="co.in", num=1, stop=1, pause=2):
