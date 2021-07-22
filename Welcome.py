@@ -320,7 +320,7 @@ def restart_bot():
 
 @bot.command(name= 'restart')
 async def restart(ctx):
-  await ctx.send("Restarting bot...")
+  await ctx.send("**🤖 Re-proccessing, starting now!**")
   restart_bot()
     
 @restart.error
