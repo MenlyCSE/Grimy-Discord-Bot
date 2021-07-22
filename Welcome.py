@@ -320,13 +320,10 @@ def restart_bot():
 
 @bot.command(name= 'restart')
 async def restart(ctx):
-  await ctx.send("**🤖 Re-proccessing, starting now!**")
-  restart_bot()
+  if ctx.author.id in (436646726204653589)
+      await ctx.send("**🤖 Re-proccessing, starting now!**")
+      restart_bot()
     
-@restart.error
-async def restart_error(ctx, error):
-    if isinstance(error, MissingPermissions):
-        await ctx.send(f'**You are missing permissions!**', delete_after=5)
 
 bot.load_extension('cogs.ToggleCog')
 bot.load_extension('cogs.HelpCogs')
