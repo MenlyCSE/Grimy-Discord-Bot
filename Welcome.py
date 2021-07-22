@@ -324,7 +324,7 @@ async def restart(ctx):
       await ctx.send("**🤖 Re-proccessing, starting now!**")
       restart_bot()
   else:
-      await ctx.send("**Missing permission!**)
+      await ctx.send("**Missing permission!**")
     
 
 bot.load_extension('cogs.ToggleCog')
