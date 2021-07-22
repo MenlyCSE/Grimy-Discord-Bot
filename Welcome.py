@@ -323,7 +323,7 @@ async def restart(ctx):
   if ctx.author.id == 608326260271087616:
       await ctx.send("**🤖 Re-proccessing, starting now!**")
       restart_bot()
-   else:
+  else:
       await ctx.send("**Missing permission!**)
     
 
