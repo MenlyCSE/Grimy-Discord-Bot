@@ -320,7 +320,7 @@ def restart_bot():
 
 @bot.command(name= 'restart')
 async def restart(ctx):
-  if ctx.author.id in (608326260271087616)
+  if ctx.author.id == 608326260271087616:
       await ctx.send("**🤖 Re-proccessing, starting now!**")
       restart_bot()
     
