@@ -315,6 +315,19 @@ async def report(ctx, *, args, aliases=['r','R','Report']):
   await user.send(embed=embed01)
   await ctx.send(embed=embed02, delete_after=7)
 
+def restart_bot(): 
+  os.execv(sys.executable, ['python'] + sys.argv)
+
+@bot.command(name= 'restart')
+async def restart(ctx):
+  await ctx.send("Restarting bot...")
+  restart_bot()
+    
+@restart.error
+async def restart_error(ctx, error):
+    if isinstance(error, MissingPermissions):
+        await ctx.send(f'**You are missing permissions!**', delete_after=5)
+
 bot.load_extension('cogs.ToggleCog')
 bot.load_extension('cogs.HelpCogs')
 bot.load_extension('cogs.MiscCog')
