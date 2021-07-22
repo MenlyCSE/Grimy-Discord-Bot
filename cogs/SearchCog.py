@@ -60,7 +60,7 @@ class SearchCog(commands.Cog):
           for j in search(searchContent, tld="co.in", num=1, stop=1, pause=2):
             await message.channel.send(j)
     else:
-        await message.channel.send("Error")
+            await message.channel.send("Error")
             
       if message.content.startswith('$hello'):
         await message.channel.send(f' **{random.choice(Greetings)}** '+ message.author.mention +"!")
