@@ -101,6 +101,7 @@ async def Modcmds(ctx):
 embed9.add_field(name = "**All moderator commands**", value = "`$mute [member]` to mute any members\n`$unmute [member]` to unmute any members\n`$ban [member]` to ban any members\n`$unban [member]` to unban any members\n`$softban [member]` to temp ban any members\n`$kick [member]` to kick any members\n`$purge [#]` to delete any amount of messages\n`$toggle [command]` to enable/disable commands")
 
 @bot.command(name="commands", aliases=['C','cmds','Commands','Cmds'])
+@commands.cooldown(1,10,commands.BucketType.user)
 async def dashboard(ctx):
   await ctx.send(embed=embed10)
 
