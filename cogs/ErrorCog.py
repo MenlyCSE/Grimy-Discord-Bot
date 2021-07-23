@@ -39,7 +39,7 @@ class ErrorCog(commands.Cog):
           await ctx.send(embed=embed4, delete_after=5)
           await ctx.message.delete()
       elif isinstance(error, commands.CommandOnCooldown):
-          await ctx.send(f"{ctx.message.author.mention} **Your on cooldown! Try again in {:.2f}s**".format(error.retry_after))
+          await ctx.send(f'{ctx.message.author.mention}', "**Your on cooldown! Try again in {:.2f}s**".format(error.retry_after))
           await ctx.message.delete()
       else:
         raise error
