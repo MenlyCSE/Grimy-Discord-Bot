@@ -219,83 +219,6 @@ async def enter(ctx, *, args):
       await ctx.send(f'{ctx.message.author.mention} **you have been listed in** <#858908131475062835>**!**')
 
 @bot.command()
-async def play(ctx):
-
-  Choices=['Eat ramen', 'Eat paper', 'Eat potatoe', 'Eat token', 'Eat magic staff', 'Eat mushy stuff', 'Eat playdough','Eat lemons', 'Eat the barrels', 'Eat the cute panda', 'Eat the paintings', 'Eat nothing']
-
-  bts = [
-     Button(style=ButtonStyle.red, label = random.choice(Choices)),
-     Button(style=ButtonStyle.blue, label = random.choice(Choices)),
-     Button(style=ButtonStyle.green, label = random.choice(Choices))
-]
-
-  wordContent=["You died!", "You enjoyed!", "You had a heart attack", 'You fainted!', 'You learned how to fly!', 'You went super sayian', 'Eat it and teleport to anime world!', 'Eat this and live!', 'Ea- are you sure?', 'Eating it really?']
-
-  content=['  https://media.discordapp.net/attachments/788968211307692053/861397315414523904/9531aca9a994cf5995da6fb423e4e5faa05ef5c7c7fa4f644cac6a8fada6d64e.png', 'https://media.discordapp.net/attachments/838315498050551828/861399043204448256/dbbf22dd0ece521d70af71ef223ebfff8d9f9ac74bc2952013b0497dc65e13f3.png', 'https://media.discordapp.net/attachments/838315498050551828/861401559367811112/62115a035004df85775da4092c41e423f628c08ed386ce2724c9bb3efe5ffaed.png', 'https://media.discordapp.net/attachments/782045221164417084/861599985123196938/unknown.png', 'https://media.discordapp.net/attachments/782045221164417084/861788945590255646/main-qimg-722ecfc93dbf9003c2c9833ee84563f2.png?width=392&height=239', 'https://media.discordapp.net/attachments/782045221164417084/861789072078143498/main-qimg-ed34733997c52d634152a1d01d34461d.png?width=482&height=270', 'https://media.discordapp.net/attachments/782045221164417084/861789160444002335/0dca507297bc9eab3251871ded823b0a.png?width=512&height=384', 'https://images-ext-2.discordapp.net/external/JfCxORi7gK8wtprXRId1d8P_fNRlSg68gW4as23dBe8/https/i.pinimg.com/originals/07/8e/e0/078ee00171b9eb2939b4e6437a4e6d7b.jpg?width=453&height=453', 'https://images-ext-2.discordapp.net/external/sydFjlCTp9DsBr5XbjSYLhhPDvbA3-VSUHDr2MfkdIo/https/i.ytimg.com/vi/X7NdykPg_mM/maxresdefault.jpg?width=805&height=453']
-
-  urls = random.choice(content)
-  wordContents = random.choice(wordContent)
-
-  embed24 = discord.Embed(
-    title = f'{wordContents}',
-    colour = discord.Colour.orange()
-  )
-
-  embed24.set_image(url = f'{urls}')
-  
-  await ctx.send("Your starving... what do you eat?", components = [bts])
-  interaction = await bot.wait_for("button_click")
-  await interaction.respond(embed=embed24)
-
-embed155 = discord.Embed(
-  title = 'Win to get a special role! [Now in Beta]',
-  colour = discord.Colour.blurple()
-)
-
-embed166 = discord.Embed(
-  title = 'Nope',
-  colour = discord.Colour.blurple()
-)
-
-@bot.command()
-async def find(ctx):
-
-
-    calcmsg = await ctx.send(embed=embed155)
-    emojis20 = ['💩', '👻', '🤖', '😺', '💌', '💥', '👁️‍🗨️', '🗨', '💤', '🦾', '👅', '💂‍♂️']
-
-
-
-    t = [ 
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20))
-    ]
-
-    ts = [ 
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-    ]
-
-    tts = [ 
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20)),
-        Button(style=ButtonStyle.random_color(), label= random.choice(emojis20))
-    ]
-
-    await ctx.send("`This is in beta currently! type: $cmds`", components = [t, ts, tts])
-
-    while True:
-        interaction1 = await bot.wait_for("button_click", check=lambda i:i.component.label.startswith(f'{random.choice(emojis20)}'))
-        await interaction1.respond(type= InteractionType.DeferredUpdateMessage, content = await calcmsg.edit(embed=embed155))
-    else:
-         await calcmsg.edit(embed=embed166)
-
-@bot.command()
 async def report(ctx, *, args, aliases=['r','R','Report']):
  if ctx.message.attachments:
   attachment02 = ctx.message.attachments[0].url
@@ -327,7 +250,6 @@ async def restart(ctx):
       restart_bot()
   else:
       await ctx.send("**Missing permission!**")
-  
 
 bot.load_extension('cogs.ToggleCog')
 bot.load_extension('cogs.HelpCogs')
