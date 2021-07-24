@@ -271,31 +271,6 @@ async def restart(ctx):
       restart_bot()
   else:
       await ctx.send("**Missing permission!**")
-
-@bot.command()
-async def serverinfo(ctx, aliases = ['server']):
-  name = str(ctx.guild.name)
-  description = str(ctx.guild.description)
-
-  owner = str(ctx.guild.owner)
-  id = str(ctx.guild.id)
-  region = str(ctx.guild.region)
-  memberCount = str(ctx.guild.member_count)
-
-  icon = str(ctx.guild.icon_url)
-   
-  embedkk = discord.Embed(
-      title=name + " Server Information",
-      description=description,
-      color=discord.Color.blue()
-    )
-  embedkk.set_thumbnail(url=icon)
-  embedkk.add_field(name="Owner", value=owner, inline=True)
-  embedkk.add_field(name="Server ID", value=id, inline=True)
-  embedkk.add_field(name="Region", value=region, inline=True)
-  embedkk.add_field(name="Member Count", value=memberCount, inline=True)
-
-  await ctx.send(embed=embedkk)
         
 bot.load_extension('cogs.ToggleCog')
 bot.load_extension('cogs.HelpCogs')
