@@ -295,7 +295,7 @@ async def serverinfo(ctx, aliases = ['server']):
   embedkk.add_field(name="Region", value=region, inline=True)
   embedkk.add_field(name="Member Count", value=memberCount, inline=True)
 
-  await ctx.send(embed=embed)
+  await ctx.send(embed=embedkk)
         
 bot.load_extension('cogs.ToggleCog')
 bot.load_extension('cogs.HelpCogs')
