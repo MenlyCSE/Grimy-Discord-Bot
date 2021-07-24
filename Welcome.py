@@ -257,7 +257,7 @@ bot.load_extension('cogs.MiscCog')
 bot.load_extension('cogs.ErrorCog')
 bot.load_extension('cogs.AdminCogs')
 bot.load_extension('cogs.SearchCog')
-bot.load_extension('cogs.Music')
+bot.load_extension('cogs.MusicCog')
 
 bot.run(os.getenv('BOT_TOKEN'))
 
