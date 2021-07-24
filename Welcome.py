@@ -280,7 +280,7 @@ async def restart(ctx):
 @bot.command(aliases=['Server'])
 @commands.cooldown(1,5,commands.BucketType.user)
 async def server(ctx):
-    embed116 = discord.Embed().set_thumbnail(url ='https://cdn.discordapp.com/icons/774813762733604865/a_06195d2df5258c5c55752761cb7191fc.gif?size=128&quot').add_field(name="Server's join date:", value="```Sat, 01 May 2020, 02:00 PM EST```").add_field(name="Creator: Inculpable", value="```All rights reserved by Discord state law article 23 section 15.```")
+    embed116 = discord.Embed().set_thumbnail(url ='https://cdn.discordapp.com/icons/774813762733604865/a_06195d2df5258c5c55752761cb7191fc.gif?size=128&quot').add_field(name="Server's created date:", value="```Sat, 01 May 2020, 02:00 PM EST```").add_field(name="Creator: Inculpable", value="```All rights reserved by Discord state law article 23 section 15.```")
     await ctx.send(embed=embed116)
         
 bot.load_extension('cogs.ToggleCog')
