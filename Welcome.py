@@ -116,6 +116,7 @@ embed10 = discord.Embed(
 )
 
 @bot.command(invoke_without_command=True, aliases=['Mod','mod','modcmds'])
+@commands.cooldown(1,10,commands.BucketType.user)
 async def Modcmds(ctx):
   await ctx.send(embed=embed9)
 
@@ -160,6 +161,7 @@ async def MsgReact(message):
             await message.add_reaction(i)
 
 @bot.command()
+@commands.cooldown(1,20,commands.BucketType.user)
 async def verify(ctx):
     t = 0
     embed15 = discord.Embed(color=discord.Color.orange(), description=f'{ctx.message.author.mention} Step 1/3 **Enter your Roblox username:**')
@@ -194,6 +196,7 @@ async def verify(ctx):
                 time.sleep(3);t+=1
 
 @bot.command(aliases=['Info'])
+@commands.cooldown(1,5,commands.BucketType.user)
 async def info(ctx, *, member: discord.Member=None):
     if not member:
         member = ctx.message.author
@@ -208,6 +211,7 @@ async def info_error(ctx, error):
         await ctx.send(f'**I could not find this member.**', delete_after=5)
 
 @bot.command(aliases=['Credit','credits','Credits'], brief='credits', description='credits')
+@commands.cooldown(1,20,commands.BucketType.user)
 async def credit(ctx):
     user2 = await bot.fetch_user(730157936684433508)
     user3 = await bot.fetch_user(838512073989816410)
@@ -240,6 +244,7 @@ async def enter(ctx, *, args):
       await ctx.send(f'{ctx.message.author.mention} **you have been listed in** <#858908131475062835>**!**')
 
 @bot.command()
+@commands.cooldown(1,20,commands.BucketType.user)
 async def report(ctx, *, args, aliases=['r','R','Report']):
  if ctx.message.attachments:
   attachment02 = ctx.message.attachments[0].url
