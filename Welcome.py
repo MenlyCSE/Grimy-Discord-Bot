@@ -161,7 +161,7 @@ async def MsgReact(message):
             await message.add_reaction(i)
 
 @bot.command()
-@commands.cooldown(1,20,commands.BucketType.user)
+@commands.cooldown(1, 30, commands.BucketType.channel)
 async def verify(ctx):
     t = 0
     embed15 = discord.Embed(color=discord.Color.orange(), description=f'{ctx.message.author.mention} Step 1/3 **Enter your Roblox username:**')
