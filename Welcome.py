@@ -202,7 +202,6 @@ async def info(ctx, *, member: discord.Member=None):
         member = ctx.message.author
         roles = [role for role in member.roles]
     embed15 = discord.Embed().set_thumbnail(url = member.avatar_url).add_field(name="User's join date:", value=member.joined_at.strftime("```%a, %#d %B %Y, %I:%M %p EST```")).add_field(name="User's creation date:", value=member.created_at.strftime("```%a, %#d %B %Y, %I:%M %p EST```"))
-    embed15.color = 0xe4b3ab
     await ctx.send(embed=embed15)
 
 @info.error
