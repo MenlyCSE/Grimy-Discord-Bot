@@ -17,18 +17,22 @@ class MiscCog(commands.Cog):
     self.bot = bot
 
   @commands.command(aliases=['Item'])
+  @commands.cooldown(1,3,commands.BucketType.user)
   async def item(self, ctx):
     await ctx.send(f'Your lucky item is **{random.choice(tickets)}**')
 
   @commands.command(aliases=['Predict'])
+  @commands.cooldown(1,3,commands.BucketType.user)
   async def predict(self, ctx):
     await ctx.send(f'I predict **{random.choice(predictions)}{random.choice(puncuations)}**')
 
   @commands.command(aliases=['Crystal'])
+  @commands.cooldown(1,3,commands.BucketType.user)
   async def crystal(self, ctx):
     await ctx.send(f'The crystalball says **{random.choice(crystalball)}{random.choice(puncuations2)}**')
 
   @commands.command(aliases=['Misc'])
+  @commands.cooldown(1,10,commands.BucketType.user)
   async def misc(self, ctx):
     await ctx.send(embed=embed11)
 
