@@ -25,18 +25,22 @@ class HelpCogs(commands.Cog):
     bot.help_command.cog = self
 
   @commands.command(aliases=['F','f','faq'])
+  @commands.cooldown(1, 30, commands.channel.user)
   async def FAQ(self, ctx):
     await ctx.send(embed=embed5)
 
   @commands.command(aliases=['b','B','beginner'])
+  @commands.cooldown(1, 30, commands.channel.user)
   async def Beginner(self, ctx):
     await ctx.send(embed=embed6)
 
   @commands.command(aliases=['Q','q','questions'])
+  @commands.cooldown(1, 30, commands.channel.user)
   async def Questions(self, ctx):
     await ctx.send(embed=embed7)
 
   @commands.command(aliases=['I','i','inspiration'])
+  @commands.cooldown(1, 30, commands.channel.user)
   async def Inspiration(self, ctx):
     await ctx.send(embed=embed8)
 
