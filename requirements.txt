@@ -12,4 +12,3 @@ pip==21.1.3
 google==3.0.0
 flask==2.0.1
 discord-components==1.1.4
-discord.py[voice]
