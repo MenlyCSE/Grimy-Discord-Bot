@@ -127,7 +127,7 @@ embed9.add_field(name = "**All moderator commands**", value = "`$mute [member]` 
 async def dashboard(ctx):
   await ctx.send(embed=embed10)
 
-embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot\n`$report` This will notify the moderators.")
+embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$report` This will notify the moderators.\n`$server` To view the server's info.")
 
 emojis = [":Checkmark:846176167505297419"]
 emojis2 = [":YouTube:838302984701214720"]
