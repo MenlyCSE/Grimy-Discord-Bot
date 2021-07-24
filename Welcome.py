@@ -272,6 +272,14 @@ async def restart(ctx):
   else:
       await ctx.send("**Missing permission!**")
 
+@bot.command(aliases=['server', 'Server'])
+async def serverinfo(ctx, *, member: discord.Member=None):
+    if not member:
+        server = ctx.message.guild.id
+    embedkk = discord.Embed().set_thumbnail(url = server.avatar_url).add_field(name="Servers's creation date:", value=member.created_at.strftime("```%a, %#d %B %Y, %I:%M %p EST```"))
+    embedkk.color = 0xe4b3ab
+    await ctx.send(embed=embedkk)
+        
 bot.load_extension('cogs.ToggleCog')
 bot.load_extension('cogs.HelpCogs')
 bot.load_extension('cogs.MiscCog')
