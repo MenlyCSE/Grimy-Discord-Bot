@@ -130,7 +130,7 @@ embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use th
 
 emojis = [":Checkmark:846176167505297419", "<a:BlueVerified:868287579710169099>", "<a:Like:868457775108354090>"]
 emojis2 = [":YouTube:838302984701214720"]
-emojis3 = ["👍"]
+emojis3 = ["<a:BlueVerified:868287579710169099>"]
 emojis4 = [":BlenderRegular:838308035914498058",":RobloxStudios:856704412704571392"]
 emojis5 = ["❤️"]
 emojis6 = ["🥳"]
