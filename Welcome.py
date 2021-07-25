@@ -128,7 +128,7 @@ async def dashboard(ctx):
 
 embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$report` This will notify the moderators.\n`$server` To view the server's info.")
 
-emojis = [":Checkmark:846176167505297419"]
+emojis = [":Checkmark:846176167505297419", ":BlueVerified:868641926495240292", ":Like:868641043103494205"]
 emojis2 = [":YouTube:838302984701214720"]
 emojis3 = ["👍"]
 emojis4 = [":BlenderRegular:838308035914498058",":RobloxStudios:856704412704571392"]
