@@ -41,6 +41,7 @@ Grimys = ["What am I your maid?", "Nope!", "Not doing that bud.", "Goodluck with
 lols = ["Did I hear someone talking about the boss man?", "He is watching you :))", "He is currently going super sayian right now.", "Wait till you hear this @Milky!", "He is currently buying icecream for everyone!", "Did you mention him?", "MWHAHAHA, he will murder you!", "He is killing defualt cubes right now B)", "I'm still waiting for him to feed me bytes."]
 sWord = ["Detecting the search right now!", "On the search now!", "Looking far and wide!", "Searching for it!", "Just one moment!", "Trying to find the search!", "Looking beyond the sea!", "Searching through sewers!", "Searching for it currently!"]
 emojis7 = ["<a:BlueVerified:868287579710169099>"]
+emojis8 = ["<a:Bell:868457765650186290>"]
 
 class SearchCog(commands.Cog):
   def __init__(self, bot):
@@ -95,7 +96,8 @@ class SearchCog(commands.Cog):
         await message.channel.send(f' **{random.choice(Greetings)}** '+ message.author.mention +"!")
 
       if any(word in message.content.lower() for word in grimy):
-        await message.channel.send(f'**{random.choice(Grimys)}**')
+        for i in emojis8:
+            await message.add_reaction(i)
       
       if any(word in message.content.lower() for word in inculpable):
         for i in emojis7:
