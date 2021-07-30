@@ -44,12 +44,12 @@ class HelpCogs(commands.Cog):
   async def Inspiration(self, ctx):
     await ctx.send(embed=embed8)
 
-  @commands.command(aliases=['sculpting', 'Sculpt', 'Sculpting'])
+  @commands.command(aliases=['sculpting', 'sculpt', 'Sculpting'])
   @commands.cooldown(1, 30, commands.BucketType.channel)
   async def Sculpt(self, ctx):
     await ctx.send(embed=embed66)
 
-  @commands.command(aliases=['modeling', 'model', 'Modeling'])
+  @commands.command(aliases=['modeling', 'Model', 'Modeling'])
   @commands.cooldown(1, 30, commands.BucketType.channel)
   async def model(self, ctx):
     await ctx.send(embed=embed67)
