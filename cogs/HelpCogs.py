@@ -30,7 +30,7 @@ class HelpCogs(commands.Cog):
     await ctx.send(embed=embed5)
 
   @commands.command(aliases=['b','B','beginner'])
-  @commands.cooldown(1, 30, commands.BucketType.channel)
+  @commands.cooldown(1, 20, commands.BucketType.channel)
   async def Beginner(self, ctx):
     await ctx.send(embed=embed65)
 
@@ -45,27 +45,27 @@ class HelpCogs(commands.Cog):
     await ctx.send(embed=embed8)
 
   @commands.command(aliases=['sculpting', 'sculpt', 'Sculpting'])
-  @commands.cooldown(1, 30, commands.BucketType.channel)
+  @commands.cooldown(1, 10, commands.BucketType.channel)
   async def Sculpt(self, ctx):
     await ctx.send(embed=embed66)
 
   @commands.command(aliases=['modeling', 'Model', 'Modeling'])
-  @commands.cooldown(1, 30, commands.BucketType.channel)
+  @commands.cooldown(1, 10, commands.BucketType.channel)
   async def model(self, ctx):
     await ctx.send(embed=embed67)
 
   @commands.command(aliases=['Animate','animating','Animating'])
-  @commands.cooldown(1, 30, commands.BucketType.channel)
+  @commands.cooldown(1, 10, commands.BucketType.channel)
   async def animate(self, ctx):
     await ctx.send(embed=embed68)
 
   @commands.command(aliases=['Graphics','GFX'])
-  @commands.cooldown(1, 30, commands.BucketType.channel)
+  @commands.cooldown(1, 10, commands.BucketType.channel)
   async def graphics(self, ctx):
     await ctx.send(embed=embed69)
 
   @commands.command(aliases=['Visuals','VFX'])
-  @commands.cooldown(1, 30, commands.BucketType.channel)
+  @commands.cooldown(1, 10, commands.BucketType.channel)
   async def visuals(self, ctx):
     await ctx.send(embed=embed70)
 
