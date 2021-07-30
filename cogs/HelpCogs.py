@@ -64,9 +64,9 @@ class HelpCogs(commands.Cog):
   async def graphics(self, ctx):
     await ctx.send(embed=embed69)
 
-  @commands.command(aliases=['Visual','VFX'])
+  @commands.command(aliases=['Visuals','VFX'])
   @commands.cooldown(1, 30, commands.BucketType.channel)
-  async def visual(self, ctx):
+  async def visuals(self, ctx):
     await ctx.send(embed=embed70)
 
   def __init__(self, bot):
@@ -122,7 +122,7 @@ embed7.add_field(name = "Don't only say Hello", value = "**1.** Instead of sayin
 
 embed6.add_field(name = "**Sculpting**", value = "**1.** http://y2u.be/L3XtAFUWNuk\n**2.** http://y2u.be/0lj643VmTsg\n\n**Modeling**\n**1.** http://y2u.be/elUJCEC06r8\n**2.** http://y2u.be/6mT4XFJYq-4\n**3.** http://y2u.be/JMBMHSca_j0\n\n**Animating**\n**1.** http://y2u.be/uDqjIdI4bF4\n**2.** http://y2u.be/_C2ClFO3FAY\n\n**Graphic FX** ``GFX``\n**1.** http://y2u.be/0F_w4ynybks\n**2.** http://y2u.be/D2WuSJdQKjA\n\n**Visual FX** ``VFX``\n**1.** http://y2u.be/-6nBuVHGGuI\n**2.** http://y2u.be/wCge7Y-CmHk")
 
-embed65.add_field(name = "$sculpting", value = "**$modeling**\n**$animating**\n**$graphics** ``GFX``\n**$visual FX** ``VFX``")
+embed65.add_field(name = "$sculpting", value = "**$modeling**\n**$animating**\n**$graphics** ``GFX``\n**$visuals** ``VFX``")
 
 embed66.add_field(name = "Sculpting", value = "**1.** http://y2u.be/L3XtAFUWNuk\n**2.** http://y2u.be/0lj643VmTsg" )
 embed67.add_field(name = "Modeling", value = "*1.** http://y2u.be/elUJCEC06r8\n**2.** http://y2u.be/6mT4XFJYq-4\n**3.** http://y2u.be/JMBMHSca_j0" )
