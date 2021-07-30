@@ -97,7 +97,7 @@ embed7.add_field(name = "Don't only say Hello", value = "**1.** Instead of sayin
 
 embed6.add_field(name = "**Sculpting**", value = "**1.** http://y2u.be/L3XtAFUWNuk\n**2.** http://y2u.be/0lj643VmTsg\n\n**Modeling**\n**1.** http://y2u.be/elUJCEC06r8\n**2.** http://y2u.be/6mT4XFJYq-4\n**3.** http://y2u.be/JMBMHSca_j0\n\n**Animating**\n**1.** http://y2u.be/uDqjIdI4bF4\n**2.** http://y2u.be/_C2ClFO3FAY\n\n**Graphic FX** ``GFX``\n**1.** http://y2u.be/0F_w4ynybks\n**2.** http://y2u.be/D2WuSJdQKjA\n\n**Visual FX** ``VFX``\n**1.** http://y2u.be/-6nBuVHGGuI\n**2.** http://y2u.be/wCge7Y-CmHk")
 
-embed65.add_field(name = "Sculpting", value = "**Modeling**\n**Animating**\n**Graphics** ``GFX``\nVisual FX ``VFX``"
+embed65.add_field(name = "Sculpting", value = "**Modeling**\n**Animating**\n**Graphics** ``GFX``\nVisual FX ``VFX``")
 
 embed5.add_field(name = "**FAQ Blender**", value = "**1.** How to install blender?\n**2.** My mesh is see through!\n**3.** How do I subdivide?\n**4.** Blender to Roblox?\n**5.** How to extrude?\n**6.** Change blender layout?\n**7.** Blender experimental?\n**8.** Render faster?")
 
