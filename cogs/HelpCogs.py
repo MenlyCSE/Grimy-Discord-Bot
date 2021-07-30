@@ -104,27 +104,22 @@ embed65 = discord.Embed(
 )
 
 embed66 = discord.Embed(
-  title = 'Resources for sculpting.',
   colour = discord.Colour.blurple()
 )
 
 embed67 = discord.Embed(
-  title = 'Resources for modeling.',
   colour = discord.Colour.blurple()
 )
 
 embed68 = discord.Embed(
-  title = 'Resources for animating.',
   colour = discord.Colour.blurple()
 )
 
 embed69 = discord.Embed(
-  title = 'Resources for GFXs.',
   colour = discord.Colour.blurple()
 )
 
 embed70 = discord.Embed(
-  title = 'Resources for VFXs.',
   colour = discord.Colour.blurple()
 )
 
@@ -148,11 +143,11 @@ embed6.add_field(name = "**Sculpting**", value = "**1.** http://y2u.be/L3XtAFUWN
 
 embed65.add_field(name = "$sculpting", value = "**$modeling**\n**$animating**\n**$graphics**\n**$visuals**")
 
-embed66.add_field(name = "Sculpting", value = "**1.** http://y2u.be/L3XtAFUWNuk\n**2.** http://y2u.be/0lj643VmTsg" )
-embed67.add_field(name = "Modeling", value = "**1.** http://y2u.be/elUJCEC06r8\n**2.** http://y2u.be/6mT4XFJYq-4\n**3.** http://y2u.be/JMBMHSca_j0" )
-embed68.add_field(name = "Animating", value = "**1.** http://y2u.be/uDqjIdI4bF4\n**2.** http://y2u.be/_C2ClFO3FAY" )
-embed69.add_field(name = "Graphics", value = "**1.** http://y2u.be/0F_w4ynybks\n**2.** http://y2u.be/D2WuSJdQKjA" )
-embed70.add_field(name = "Visual FX", value = "**1.** http://y2u.be/-6nBuVHGGuI\n**2.** http://y2u.be/wCge7Y-CmHk" )
+embed66.add_field(name = "Resources for Sculpting", value = "**1.** http://y2u.be/L3XtAFUWNuk\n**2.** http://y2u.be/0lj643VmTsg" )
+embed67.add_field(name = "Resources for Modeling", value = "**1.** http://y2u.be/elUJCEC06r8\n**2.** http://y2u.be/6mT4XFJYq-4\n**3.** http://y2u.be/JMBMHSca_j0" )
+embed68.add_field(name = "Resources for Animating", value = "**1.** http://y2u.be/uDqjIdI4bF4\n**2.** http://y2u.be/_C2ClFO3FAY" )
+embed69.add_field(name = "Resources for Graphics", value = "**1.** http://y2u.be/0F_w4ynybks\n**2.** http://y2u.be/D2WuSJdQKjA" )
+embed70.add_field(name = "Resources for Visual FX", value = "**1.** http://y2u.be/-6nBuVHGGuI\n**2.** http://y2u.be/wCge7Y-CmHk" )
 
 embed5.add_field(name = "**FAQ Blender**", value = "**1.** How to install blender?\n**2.** My mesh is see through!\n**3.** How do I subdivide?\n**4.** Blender to Roblox?\n**5.** How to extrude?\n**6.** Change blender layout?\n**7.** Blender experimental?\n**8.** Render faster?")
 
