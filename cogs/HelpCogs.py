@@ -104,6 +104,31 @@ embed65 = discord.Embed(
   colour = discord.Colour.blurple()
 )
 
+embed66 = discord.Embed(
+  title = '**Resources for sculpting.',
+  colour = discord.Colour.blurple()
+)
+
+embed67 = discord.Embed(
+  title = 'Resources for modeling.',
+  colour = discord.Colour.blurple()
+)
+
+embed68 = discord.Embed(
+  title = 'Resources for animating.',
+  colour = discord.Colour.blurple()
+)
+
+embed69 = discord.Embed(
+  title = 'Resources for GFXs.',
+  colour = discord.Colour.blurple()
+)
+
+embed70 = discord.Embed(
+  title = 'Resources for VFXs.',
+  colour = discord.Colour.blurple()
+)
+
 embed7 = discord.Embed(
   title = '**Proper Questions Guide**',
   description = 'Use this guide to save time',
