@@ -129,12 +129,13 @@ async def dashboard(ctx):
 embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$report` This will notify the moderators.\n`$server` To view the server's info.")
 
 emojis = [":Checkmark:846176167505297419", "<a:BlueVerified:868287579710169099>", "<a:Like:868457775108354090>", "<a:Bell:868457765650186290>", "<a:Applause:868457781009743922"]
-emojis2 = [":YouTube:838302984701214720"]
+emojis2 = [":YouTube:838302984701214720", "<a:TwinParrot:868457780321857597>", "<a:PepeRun:868278334046474261>", "<a:HappyPepe:868273311006740531>"]
 emojis3 = ["<a:BlueVerified:868287579710169099>"]
 emojis4 = [":BlenderRegular:838308035914498058",":RobloxStudios:856704412704571392"]
 emojis5 = ["❤️"]
 emojis6 = ["🥳"]
 emojis7 = ["<a:Like:868457775108354090>", "<a:Dislike:868457777142587412>"]
+
 
 @bot.listen('on_message')
 async def MsgReact(message):
@@ -158,6 +159,9 @@ async def MsgReact(message):
             await message.add_reaction(i)
     if(message.channel.id == 860971153929142313):
         for i in emojis6:
+            await message.add_reaction(i)
+    if(message.channel.id == 775103140172267530):
+        for i in emojis9:
             await message.add_reaction(i)
 
 @bot.command()
