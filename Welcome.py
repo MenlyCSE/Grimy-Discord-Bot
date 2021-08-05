@@ -185,6 +185,7 @@ async def verify(ctx):
       try:
         Id = requests.get(f'https://api.roblox.com/users/get-by-username?username={msg.content}').json()['Id']
         await ctx.send(embed=embed16)
+        break
       except:
         await ctx.send(f'{ctx.message.author.mention} **Unable to find your user!**')
         break
