@@ -90,6 +90,7 @@ async def on_member_join(member):
     try:
         channel = bot.get_channel(827603472467755008)
         try:
+            random_words = ['Welcome', 'Hello & welcome', 'Greetings', 'Hey', 'Hello']
             embed = discord.Embed(colour=discord.Colour.blue())
             embed.set_author(name=f'{random.choice(random_words)} {member.name}!', icon_url=member.avatar_url)
             await channel.send(embed=embed)
