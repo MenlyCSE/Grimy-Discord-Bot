@@ -165,7 +165,7 @@ async def MsgReact(message):
             await message.add_reaction(i)
 
 @bot.command()
-@commands.cooldown(1, 45, commands.BucketType.channel)
+@commands.cooldown(1, 25, commands.BucketType.channel)
 async def verify(ctx):
     t = 0
     embed15 = discord.Embed(color=discord.Color.orange(), description=f'{ctx.message.author.mention} Step 1/3 **Enter your Roblox username:**')
@@ -185,8 +185,9 @@ async def verify(ctx):
       try:
         Id = requests.get(f'https://api.roblox.com/users/get-by-username?username={msg.content}').json()['Id']
         await ctx.send(embed=embed16)
+      except:
+        await ctx.send(f'{ctx.message.author.mention} **Unable to find your user!**')
         break
-      except: await ctx.send(f'{ctx.message.author.mention} **Unable to find your user!**')
     while True:
         if requests.get(f'https://users.roblox.com/v1/users/{Id}').json()['description'] == privKey: 
             await ctx.send(embed=embed18)
