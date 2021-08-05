@@ -91,7 +91,7 @@ async def on_member_join(member):
         channel = bot.get_channel(827603472467755008)
         try:
             embed = discord.Embed(colour=discord.Colour.blue())
-            embed.set_author(name=f'Hello & welcome {member.name}!', icon_url=member.avatar_url)
+            embed.set_author(name=f'{random.choice(random_words)} {member.name}!', icon_url=member.avatar_url)
             await channel.send(embed=embed)
         except Exception as e:
             raise e
