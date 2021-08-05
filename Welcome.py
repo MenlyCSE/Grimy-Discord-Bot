@@ -91,9 +91,7 @@ async def on_member_join(member):
         channel = bot.get_channel(827603472467755008)
         try:
             embed = discord.Embed(colour=discord.Colour.blue())
-            embed.set_author(name=member.name, icon_url=member.avatar_url)
-            embed.add_field(name=F'> {member.name} **has joined us!**', value=F"**Welcome & remember to read <#775101922914992138>\nand personalize in <#774827950478327809>**", inline=False)
-            embed.set_thumbnail(url=member.avatar_url)
+            embed.set_author(name=f'Hello & welcome {member.name}!', icon_url=member.avatar_url)
             await channel.send(embed=embed)
         except Exception as e:
             raise e
