@@ -122,15 +122,12 @@ async def Modcmds(ctx):
 
 embed9.add_field(name = "**All moderator commands**", value = "`$mute [member]` to mute any members\n`$unmute [member]` to unmute any members\n`$ban [member]` to ban any members\n`$unban [member]` to unban any members\n`$softban [member]` to temp ban any members\n`$kick [member]` to kick any members\n`$purge [#]` to delete any amount of messages\n`$toggle [command]` to enable/disable commands\n`$event [command]` to open/close events")
 
-emojis0 = ["<a:Like:868457775108354090>"]
-
-
 @bot.command(name="commands", aliases=['C','cmds','Commands','Cmds'])
 @commands.cooldown(1,10,commands.BucketType.user)
-async def dashboard(ctx):
+async def dashboard(ctx, message):
   author = ctx.message.author
   await author.send(embed=embed10)
-  await message.add_reaction(emojis0)
+  await message.add_reaction(<a:Like:868457775108354090>)
 
 embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$report` This will notify the moderators.\n`$server` To view the server's info.\n`$invites` To view user invites.")
 
