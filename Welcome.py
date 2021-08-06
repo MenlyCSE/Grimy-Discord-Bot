@@ -124,10 +124,10 @@ embed9.add_field(name = "**All moderator commands**", value = "`$mute [member]` 
 
 @bot.command(name="commands", aliases=['C','cmds','Commands','Cmds'])
 @commands.cooldown(1,10,commands.BucketType.user)
-async def dashboard(ctx, message):
+async def dashboard(ctx):
   author = ctx.message.author
   await author.send(embed=embed10)
-  await message.add_reaction(<a:Like:868457775108354090>)
+  await ctx.add_reaction(<a:Like:868457775108354090>)
 
 embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$report` This will notify the moderators.\n`$server` To view the server's info.\n`$invites` To view user invites.")
 
