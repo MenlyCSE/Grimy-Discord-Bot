@@ -399,7 +399,6 @@ bot.load_extension('cogs.ErrorCog')
 bot.load_extension('cogs.AdminCogs')
 bot.load_extension('cogs.SearchCog')
 
-bot.loop.create_task(setup())
 bot.run(os.getenv('BOT_TOKEN'))
 asyncio.run(bot.db.close())
 
