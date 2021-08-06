@@ -127,7 +127,6 @@ emojis0 = ["<a:Like:868457775108354090>"]
 @bot.command(name="commands", aliases=['C','cmds','Commands','Cmds'])
 @commands.cooldown(1,10,commands.BucketType.user)
 async def dashboard(ctx, user: discord.User, *, value):
-  await user.send(f"{embed=embed10}")
   await message.add_reaction(emojis0)
 
 embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$report` This will notify the moderators.\n`$server` To view the server's info.\n`$invites` To view user invites.")
