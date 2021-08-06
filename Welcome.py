@@ -3,6 +3,8 @@ WELCOME_CHANNEL_ID = 827603472467755008
 LEAVE_CHANNEL_ID = 777396672048136212
 MAX_REQUESTS = 10
 
+from datetime import datetime
+import aiosqlite
 import discord
 import os
 import shutil
