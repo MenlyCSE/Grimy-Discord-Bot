@@ -28,7 +28,7 @@ bot = commands.Bot(command_prefix=BOT_PREFIX, intents=discord.Intents.all())
 @bot.event
 async def on_ready():
     print("WERE IN", bot.user.name)
-    activity = discord.Streaming(name="Blender", url = "https://www.youtube.com/watch?v=7Gtyo_d4oqc")
+    activity = discord.Streaming(name="Blender", url = "https://www.youtube.com/c/Inculpable")
     await bot.change_presence(status=discord.Status.online, activity=activity)
     DiscordComponents(bot)
 
