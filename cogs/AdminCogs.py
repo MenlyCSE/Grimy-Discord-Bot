@@ -19,7 +19,7 @@ class AdminCogs(commands.Cog):
 
   @commands.command()
   @commands.Cog.listener()
-  @commands.has_permissions(manage_messages=True)
+  @commands.has_permissions(kick_members=True)
   async def purge(self, context, amount=5):
       await context.channel.purge(limit=amount+1)
       await context.send("**Purge done!**", delete_after=5)
