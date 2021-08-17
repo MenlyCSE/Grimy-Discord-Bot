@@ -23,6 +23,7 @@ class AdminCogs(commands.Cog):
   async def purge(self, context, amount=5):
       await context.channel.purge(limit=amount+1)
       await context.send("**Purge done!**", delete_after=5)
+      await context.message.delete()
 
   @commands.command()
   @commands.Cog.listener()
@@ -30,6 +31,7 @@ class AdminCogs(commands.Cog):
   async def kick(self, context, member : discord.Member, *, reason=None):
       await member.kick(reason=reason)
       await context.send(f'{member} **Was thrown off the rail!**')
+      await context.message.delete()
 
   @commands.command()
   @commands.Cog.listener()
@@ -37,6 +39,7 @@ class AdminCogs(commands.Cog):
   async def ban(self, context, member : discord.Member, *, reason=None):
       await member.ban(reason=reason)
       await context.send(f'{member} **Has been banished!**')
+      await context.message.delete()
 
   @commands.command()
   @commands.Cog.listener()
@@ -45,6 +48,7 @@ class AdminCogs(commands.Cog):
       user = await commands.fetch_user(id)
       await context.guild.unban(user)
       await context.send(f'{user.name} **Is now unbanished!**')
+      await context.message.delete()
       
   @commands.command()
   @commands.Cog.listener()
@@ -57,6 +61,7 @@ class AdminCogs(commands.Cog):
       print("Time to unban")
       await member.unban()
       await context.send(f'{member} **has completed the banish time!**')
+      await context.message.delete()
 
   @commands.command()
   @commands.Cog.listener()
@@ -78,6 +83,7 @@ class AdminCogs(commands.Cog):
                   
               await member.add_roles(newRole)
               await ctx.send('{} **Is now duck taped!**'.format(member.mention))
+              await ctx.message.delete()
 
   @commands.command()
   @commands.Cog.listener()
@@ -88,6 +94,7 @@ class AdminCogs(commands.Cog):
       if role.name == 'Muted':
         await member.remove_roles(role)
         await ctx.send('{} **Is now free of speech!**'.format(member.mention))
+        await ctx.message.delete()
 
   @commands.command()
   @commands.Cog.listener()
