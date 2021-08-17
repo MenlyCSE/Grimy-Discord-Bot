@@ -41,7 +41,7 @@ class ErrorCog(commands.Cog):
       elif isinstance(error, commands.CommandOnCooldown):
           await ctx.send(ctx.message.author.mention + " **Your on cooldown! Try again in {:.2f}s**".format(error.retry_after), delete_after=5)
           await ctx.message.delete()
-        raise error
+      raise error
 
 def setup(bot):
   bot.add_cog(ErrorCog(bot))
