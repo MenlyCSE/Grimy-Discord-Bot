@@ -73,6 +73,7 @@ class AdminCogs(commands.Cog):
           if role.name == 'Muted':
               await member.add_roles(role)
               await ctx.send('{} **Is now duck taped!**'.format(member.mention))
+              await ctx.message.delete()
               return
               
               overwrite = discord.PermissionsOverwrite(send_messages=False)
