@@ -41,10 +41,6 @@ class ErrorCog(commands.Cog):
       elif isinstance(error, commands.CommandOnCooldown):
           await ctx.send(ctx.message.author.mention + " **Your on cooldown! Try again in {:.2f}s**".format(error.retry_after), delete_after=5)
           await ctx.message.delete()
-      elif isinstance(error, commands.CommandNotFound):
-          await ctx.send(ctx.message.author.mention + " **Command not found**", delete_after=5)
-          await ctx.message.delete()
-      else:
         raise error
 
 def setup(bot):
