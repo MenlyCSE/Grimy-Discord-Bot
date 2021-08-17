@@ -245,7 +245,7 @@ async def enter(ctx, *, args):
 async def report(ctx, *, args, aliases=['r','R','Report']):
  if ctx.message.attachments:
   attachment02 = ctx.message.attachments[0].url
-  user = await bot.fetch_user(608326260271087616)
+  user = await bot.fetch_channel(777396672048136212)
   embed01 = discord.Embed(title = f'{args}', description = f'{ctx.message.author} ', colour = discord.Colour.random())
   embed02 = discord.Embed(title = f'Your report has been succesfully recorded.',colour = discord.Colour.random())
   embed01.set_image(url=attachment02)
@@ -255,7 +255,7 @@ async def report(ctx, *, args, aliases=['r','R','Report']):
 
  if not ctx.message.attachments:
 
-  user = await bot.fetch_user(608326260271087616)
+  user = await bot.fetch_channel(777396672048136212)
   embed01 = discord.Embed(title = f'{args}', description = f'{ctx.message.author} ', colour = discord.Colour.random())
   embed02 = discord.Embed(title = f'Your report has been succesfully recorded.', colour = discord.Colour.random())
   await ctx.message.delete()
