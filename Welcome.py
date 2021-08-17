@@ -250,7 +250,7 @@ async def report(ctx, *, args, aliases=['r','R','Report']):
   embed02 = discord.Embed(title = f'Your report has been succesfully recorded.',colour = discord.Colour.random())
   embed01.set_image(url=attachment02)
   await ctx.message.delete()
-  await user.send(embed=embed01)
+  await user.send("<@&875818651272491008>", embed=embed01)
   await ctx.send(embed=embed02, delete_after=10)
 
  if not ctx.message.attachments:
@@ -259,7 +259,7 @@ async def report(ctx, *, args, aliases=['r','R','Report']):
   embed01 = discord.Embed(title = f'{args}', description = f'{ctx.message.author} ', colour = discord.Colour.random())
   embed02 = discord.Embed(title = f'Your report has been succesfully recorded.', colour = discord.Colour.random())
   await ctx.message.delete()
-  await user.send(embed=embed01)
+  await user.send("<@&875818651272491008>", embed=embed01)
   await ctx.send(embed=embed02, delete_after=7)
 
 def restart_bot(): 
