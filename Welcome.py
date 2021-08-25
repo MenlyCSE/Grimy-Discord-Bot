@@ -116,7 +116,7 @@ async def dashboard(ctx):
   await author.send(embed=embed10)
   await ctx.message.add_reaction('<a:Like:868457775108354090>')
 
-embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$report` This will notify the moderators.\n`$server` To view the server's info.\n`$invites` To view user invites.")
+embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$server` To view the server's info.")
 
 emojis = [":Checkmark:846176167505297419", "<a:Bell:868457765650186290>", "<a:BlueVerified:868287579710169099>"]
 emojis_25 = ["<a:TwinParrot:868457780321857597>", "<a:Bell:868457765650186290>", "<a:Applause:868457781009743922", "<a:Like:868457775108354090>"]
@@ -239,28 +239,6 @@ async def enter(ctx, *, args):
       await channel2.send(embed=embed16)
       
       await ctx.send(f'{ctx.message.author.mention} **you have been listed in** <#858908131475062835>**!**')
-
-@bot.command()
-@commands.cooldown(1,20,commands.BucketType.user)
-async def report(ctx, *, args, aliases=['r','R','Report']):
- if ctx.message.attachments:
-  attachment02 = ctx.message.attachments[0].url
-  user = await bot.fetch_channel(777396672048136212)
-  embed01 = discord.Embed(title = f'{args}', description = f'{ctx.message.author} ', colour = discord.Colour.random())
-  embed02 = discord.Embed(title = f'Your report has been succesfully recorded.',colour = discord.Colour.random())
-  embed01.set_image(url=attachment02)
-  await ctx.message.delete()
-  await user.send("<@&875818651272491008>", embed=embed01)
-  await ctx.send(embed=embed02, delete_after=10)
-
- if not ctx.message.attachments:
-
-  user = await bot.fetch_channel(777396672048136212)
-  embed01 = discord.Embed(title = f'{args}', description = f'{ctx.message.author} ', colour = discord.Colour.random())
-  embed02 = discord.Embed(title = f'Your report has been succesfully recorded.', colour = discord.Colour.random())
-  await ctx.message.delete()
-  await user.send("<@&875818651272491008>", embed=embed01)
-  await ctx.send(embed=embed02, delete_after=7)
 
 def restart_bot(): 
   os.execv(sys.executable, ['python'] + sys.argv)
