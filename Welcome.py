@@ -118,10 +118,10 @@ async def dashboard(ctx):
 
 embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$server` To view the server's info.")
 
-emojis = [":Checkmark:846176167505297419", "<a:Bell:868457765650186290>", "<a:BlueVerified:868287579710169099>"]
+emojis = [":Checkmark:846176167505297419"]
 emojis_25 = ["<a:TwinParrot:868457780321857597>", "<a:Bell:868457765650186290>", "<a:Applause:868457781009743922", "<a:Like:868457775108354090>"]
 emojis_26 = ["<a:PepeRun:868278334046474261>", "<a:HappyPepe:868273311006740531>"]
-emojis2 = [":YouTube:838302984701214720", random.choice(emojis_25), random.choice(emojis_26)]
+emojis2 = [":YouTube:838302984701214720"]
 emojis3 = ["<a:BlueVerified:868287579710169099>"]
 emojis4 = [":BlenderRegular:838308035914498058",":RobloxStudios:856704412704571392"]
 emojis5 = ["❤️"]
