@@ -41,7 +41,7 @@ async def on_message(message):
                 "sh!t", "@sswhole", "d!ck", "dik", "d!k", "🖕", "hoe"]
     
     content = message.content.lower()
-    if word in content for word in badwords2:
+    if any(word in content for word in badwords2):
         await message.delete()
         msg = await message.channel.send(f'{message.author.mention} **{random.choice(badwordresponse)}**')
         await asyncio.sleep(6)
