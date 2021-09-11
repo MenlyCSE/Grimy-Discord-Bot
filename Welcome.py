@@ -38,7 +38,7 @@ async def on_message(message):
     badwords2 = ["sex","porn","fuck","pornography","hentai","dick","shit","what the fuck","drug","nigg"," nigga","fuk",
                  "cunt","cnut","d1ck","pussy","asswhole","b1tch","bitch","b!tch","blowjob","cock","c0ck","jack off","ejackulate",
                  "masterbait","penis","vaginia","penis","xvideo","xnxx","xhamster","tinder","booty", "ecchi", "nude", "nudse",
-                "sh!t", "@sswhole", "d!ck", "dik", "d!k", "🖕", "hoe"]
+                "sh!t", "@sswhole", "d!ck", "dik", "d!k", "🖕"]
     
     content = message.content.lower()
     if any(word in content for word in badwords2):
