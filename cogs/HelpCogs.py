@@ -151,7 +151,7 @@ embed70.add_field(name = "Resources for Visual FX", value = "**1.** http://y2u.b
 
 embed5.add_field(name = "**FAQ Blender**", value = "**1.** How to install blender?\n**2.** My mesh is see through!\n**3.** How do I subdivide?\n**4.** Blender to Roblox?\n**5.** How to extrude?\n**6.** Change blender layout?\n**7.** Blender experimental?\n**8.** Render faster?")
 
-embed5.add_field(name = "**FAQ Answers**", value = "**1.** https://www.blender.org/download/\n **2.** Select character & go to materials, then change blend mode to Oqaque.\n**3.** Select the object & go to edit mode then right click then click subdivide.\n**4.** Save the file as a Obj file then open in roblox.\n**5.** Go to edit mode then select a face & press 'e'.\n**6.** Go to edit then preferences & click themes\n**7.** https://builder.blender.org/download/daily/\n**8.** Learn: https://www.sheepit-renderfarm.com/?tag=mazerfazer")
+embed5.add_field(name = "**FAQ Answers**", value = "**1.** https://www.blender.org/download/\n **2.** Select character & go to materials, then change blend mode to Opaque.\n**3.** Select the object & go to edit mode then right click then click subdivide.\n**4.** Save the file as a .Obj file then open in roblox.\n**5.** Go to edit mode then select a face & press 'e'.\n**6.** Go to edit then preferences & click themes\n**7.** https://builder.blender.org/download/daily/\n**8.** Learn: https://www.sheepit-renderfarm.com/?tag=mazerfazer")
 
 embed5.add_field(name = "\u200b", value = "\u200b")
 
