@@ -284,8 +284,8 @@ q_list = [
 a_list = []
 
 
-@bot.command(aliases=['apply-mod'])
-async def apply_mod(ctx):
+@bot.command(aliases=['Modapp'])
+async def modapp(ctx):
     a_list = []
     submit_channel = bot.get_channel(892132102366195742)
     channel = await ctx.author.create_dm()
