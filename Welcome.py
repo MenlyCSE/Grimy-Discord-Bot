@@ -108,7 +108,7 @@ embed10 = discord.Embed(
 async def Modcmds(ctx):
   await ctx.send(embed=embed9)
 
-embed9.add_field(name = "**All moderator commands**", value = "`$mute [member]` to mute any members\n`$unmute [member]` to unmute any members\n`$ban [member]` to ban any members\n`$unban [member]` to unban any members\n`$softban [member]` to temp ban any members\n`$kick [member]` to kick any members\n`$purge [#]` to delete any amount of messages\n`$toggle [command]` to enable/disable commands\n`$event [command]` to open/close events")
+embed9.add_field(name = "**All moderator commands**", value = "`$mute [member]` to mute any members\n`$unmute [member]` to unmute any members\n`$ban [member]` to ban any members\n`$unban [member]` to unban any members\n`$softban [member]` to temp ban any members\n`$kick [member]` to kick any members\n`$purge [#]` to delete any amount of messages\n`$toggle [command]` to enable/disable commands\n`$event[on/off]` to open/close events")
 
 @bot.command(name="commands", aliases=['C','cmds','Commands','Cmds'])
 @commands.cooldown(1,10,commands.BucketType.user)
@@ -117,7 +117,7 @@ async def dashboard(ctx):
   await author.send(embed=embed10)
   await ctx.message.add_reaction('<a:Like:868457775108354090>')
 
-embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$server` To view the server's info.")
+embed10.add_field(name = 'Use "$" when using commands!', value = "`$help` Use this for help in Blender!\n`$mod` Used for moderator commands.\n`$search` Use this to surf the web.\n`$misc` Use this for fun commands!\n`$info` Use this to get a user's info!\n`$verify` Log with your Roblox account!\n`$credit` Contributions of Grimy Bot.\n`$server` To view the server's info.\n`$modapp` To apply for moderator.\n`$eventapp` To apply for event manager.")
 
 emojis = [":Checkmark:846176167505297419"]
 emojis_25 = ["<a:TwinParrot:868457780321857597>", "<a:Bell:868457765650186290>", "<a:Applause:868457781009743922", "<a:Like:868457775108354090>"]
