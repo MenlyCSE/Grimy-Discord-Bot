@@ -115,18 +115,15 @@ class AdminCogs(commands.Cog):
   @commands.has_role("Event Manager")
   async def eventon(self, ctx, channel : discord.TextChannel=None):
 
-    channel = channel or ctx.channel
-    channel2 = await bot.fetch_channel(858907794227855380)
 
-    if channel == channel2:
-      embed24 = discord.Embed(title = 'Events are currently opened! You may enter in now!', colour = discord.Colour.blue())
-      overwrite = channel.overwrites_for(ctx.guild.default_role)
-      overwrite.send_messages = True
-      await channel.set_permissions(ctx.guild.default_role, overwrite=overwrite)
-      await ctx.message.delete()
-      await ctx.send(embed=embed24)
-    else:
-        print('n')
+    embed24 = discord.Embed(title = 'Events are currently opened! You may enter in now!', colour = discord.Colour.blue())
+    channel = channel or ctx.channel
+    overwrite = channel.overwrites_for(ctx.guild.default_role)
+    overwrite.send_messages = True
+    await channel.set_permissions(ctx.guild.default_role, overwrite=overwrite)
+    await ctx.message.delete()
+    await ctx.send(embed=embed24)
+
       
 def setup(bot):
   bot.add_cog(AdminCogs(bot))
