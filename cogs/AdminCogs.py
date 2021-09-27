@@ -104,7 +104,7 @@ class AdminCogs(commands.Cog):
     
     embed20 = discord.Embed(title = 'Events are currently closed! Winners will be announced!', colour = discord.Colour.red())
     
-    channel = bot.get_channel(858907794227855380)
+    channel = bot.fetch_channel(858907794227855380)
     overwrite = channel.overwrites_for(ctx.guild.default_role)
     overwrite.send_messages = False
     await channel.set_permissions(ctx.guild.default_role, overwrite=overwrite)
