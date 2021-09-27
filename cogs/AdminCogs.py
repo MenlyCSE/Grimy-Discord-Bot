@@ -101,25 +101,31 @@ class AdminCogs(commands.Cog):
   @commands.Cog.listener()
   @commands.has_permissions(manage_channels=True)
   @commands.has_role("Event Manager")
-  async def lock(self, ctx, channel : discord.TextChannel=None):
-    channel = channel or ctx.channel
+  async def event off(self, ctx, channel : discord.TextChannel=None):
+    
+    embed20 = discord.Embed(title = 'Events are currently closed! Winners will be announced!', colour = discord.Colour.red())
+    
+    channel = bot.get_channel(858907794227855380)
     overwrite = channel.overwrites_for(ctx.guild.default_role)
     overwrite.send_messages = False
     await channel.set_permissions(ctx.guild.default_role, overwrite=overwrite)
     await ctx.message.delete()
-    await ctx.send('**Locked!**', delete_after=2)
+    await ctx.send(embed=embed20)
 
   @commands.command()
   @commands.Cog.listener()
   @commands.has_permissions(manage_channels=True)
   @commands.has_role("Event Manager")
-  async def unlock(self, ctx, channel : discord.TextChannel=None):
-    channel = channel or ctx.channel
+  async def event on(self, ctx, channel : discord.TextChannel=None):
+
+    embed24 = discord.Embed(title = 'Events are currently opened! You may enter in now!', colour = discord.Colour.blue())
+    
+    channel = bot.get_channel(858907794227855380)
     overwrite = channel.overwrites_for(ctx.guild.default_role)
     overwrite.send_messages = True
     await channel.set_permissions(ctx.guild.default_role, overwrite=overwrite)
     await ctx.message.delete()
-    await ctx.send('**Unlocked!**', delete_after=1)
+    await ctx.send(embed=embed24)
 
     
 
