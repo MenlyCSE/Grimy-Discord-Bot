@@ -306,7 +306,7 @@ async def modapp(ctx):
         if "submit" in msg.content.lower():
             submit_wait = False
             answers = "\n".join(f'{a}. {b}' for a, b in enumerate(a_list, 1))
-            submit_msg = f'Application from: **{msg.author}**\n{answers}\n\n<608326260271087616>'
+            submit_msg = f'Application from: **{msg.author}**\n{answers}\n\n<@608326260271087616>'
             await submit_channel.send(submit_msg)
 
 bot.load_extension('cogs.ToggleCog')
