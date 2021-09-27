@@ -101,7 +101,7 @@ class AdminCogs(commands.Cog):
   @commands.Cog.listener()
   @commands.has_permissions(manage_channels=True)
   @commands.has_role("Event Manager")
-  async def event-off(self, ctx, channel : discord.TextChannel=None):
+  async def event_off(self, ctx, channel : discord.TextChannel=None):
     
     embed20 = discord.Embed(title = 'Events are currently closed! Winners will be announced!', colour = discord.Colour.red())
     
@@ -116,7 +116,7 @@ class AdminCogs(commands.Cog):
   @commands.Cog.listener()
   @commands.has_permissions(manage_channels=True)
   @commands.has_role("Event Manager")
-  async def event-on(self, ctx, channel : discord.TextChannel=None):
+  async def event_on(self, ctx, channel : discord.TextChannel=None):
 
     embed24 = discord.Embed(title = 'Events are currently opened! You may enter in now!', colour = discord.Colour.blue())
     
