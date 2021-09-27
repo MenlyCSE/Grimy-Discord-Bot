@@ -319,7 +319,7 @@ a_list2 = []
 
 
 @bot.command(aliases=['Modapp'])
-async def modapp(ctx):
+async def eventapp(ctx):
     a_list2 = []
     submit_channel = bot.get_channel(892132102366195742)
     channel = await ctx.author.create_dm()
