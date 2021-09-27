@@ -104,7 +104,7 @@ class AdminCogs(commands.Cog):
     
     embed20 = discord.Embed(title = 'Events are currently closed! Winners will be announced!', colour = discord.Colour.red())
     
-    channel = bot.fetch_channel(858907794227855380)
+    channel = await bot.fetch_channel(858907794227855380)
     overwrite = channel.overwrites_for(ctx.guild.default_role)
     overwrite.send_messages = False
     await channel.set_permissions(ctx.guild.default_role, overwrite=overwrite)
@@ -118,7 +118,7 @@ class AdminCogs(commands.Cog):
 
     embed24 = discord.Embed(title = 'Events are currently opened! You may enter in now!', colour = discord.Colour.blue())
     
-    channel = bot.fetch_channel(858907794227855380)
+    channel = await bot.fetch_channel(858907794227855380)
     overwrite = channel.overwrites_for(ctx.guild.default_role)
     overwrite.send_messages = True
     await channel.set_permissions(ctx.guild.default_role, overwrite=overwrite)
