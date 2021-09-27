@@ -19,23 +19,23 @@ class ErrorCog(commands.Cog):
   @commands.Cog.listener()
   async def on_command_error(self, ctx, error):
       if isinstance(error, commands.MissingRequiredArgument):
-          embed0 = discord.Embed(title ='**You need to specify!**', colour = discord.Colour.red())
+          embed0 = discord.Embed(title ='You need to specify!', colour = discord.Colour.red())
           await ctx.send(embed=embed0, delete_after=5)
           await ctx.message.delete()
       elif isinstance(error, commands.MissingPermissions):
-          embed1 = discord.Embed(title ='**You need permissions!**', colour = discord.Colour.red())
+          embed1 = discord.Embed(title ='You need permissions!', colour = discord.Colour.red())
           await ctx.send(embed=embed1, delete_after=5)
           await ctx.message.delete()
       elif isinstance(error, commands.MissingRole):
-          embed2 = discord.Embed(title ='*You need a required role!**', colour = discord.Colour.red())
+          embed2 = discord.Embed(title ='You need a required role!', colour = discord.Colour.red())
           await ctx.send(embed=embed2, delete_after=5)
           await ctx.message.delete()
       elif isinstance(error, commands.BotMissingPermissions):
-          embed3 = discord.Embed(title ="**I don't have permissions!**", colour = discord.Colour.red())
+          embed3 = discord.Embed(title ="I don't have permissions!", colour = discord.Colour.red())
           await ctx.send(embed=embed3, delete_after=5)
           await ctx.message.delete()
       elif isinstance(error, commands.BotMissingRole):
-          embed4 = discord.Embed(title ="**I don't have the required roles!**", colour = discord.Colour.red())
+          embed4 = discord.Embed(title ="I don't have the required roles!", colour = discord.Colour.red())
           await ctx.send(embed=embed4, delete_after=5)
           await ctx.message.delete()
       elif isinstance(error, commands.CommandOnCooldown):
