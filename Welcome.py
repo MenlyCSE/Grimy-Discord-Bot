@@ -274,18 +274,6 @@ async def on_member_join(member):
     except Exception as e:
         raise e
 
-def shared_cooldown(rate, per, type=BucketType.default):
-    cooldown = Cooldown(rate, per, type=type)
-    def decorator(func):
-        if isinstance(func, Command):
-            func._buckets = CooldownMapping(cooldown)
-        else:
-            func.__commands_cooldown__ = cooldown
-        return func
-    return decorator
-
-my_cooldown = shared_cooldown(1, 600, commands.BucketType.user)
-
 
 q_list = [
     'What is your timezone**?**',
@@ -297,7 +285,7 @@ a_list = []
 
 
 @bot.command(aliases=['Modapp'])
-@my_cooldown
+@commands.cooldown(1, 600, commands.BucketType.user)
 async def modapp(ctx):
     a_list = []
     submit_channel = bot.get_channel(892132102366195742)
@@ -332,7 +320,7 @@ a_list2 = []
 
 
 @bot.command(aliases=['Eventapp'])
-@my_cooldown
+@commands.cooldown(1, 600, commands.BucketType.user)
 async def eventapp(ctx):
     a_list2 = []
     submit_channel = bot.get_channel(892132102366195742)
