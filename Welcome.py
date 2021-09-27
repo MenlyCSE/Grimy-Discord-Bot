@@ -273,6 +273,41 @@ async def on_member_join(member):
     except Exception as e:
         raise e
 
+
+q_list = [
+    'What is your timezone**?**',
+    'How active are you on discord from 1-10**?**',
+    '**Lastly**, are you experienced & are you aware of the server rules**?**'
+]
+
+a_list = []
+
+
+@bot.command(aliases=['apply-mod'])
+async def apply_mod(ctx):
+    a_list = []
+    submit_channel = bot.get_channel(892132102366195742)
+    channel = await ctx.author.create_dm()
+
+    def check(m):
+        return m.content is not None and m.channel == channel
+
+    for question in q_list:
+        sleep(.5)
+        await channel.send(question)
+        msg = await bot.wait_for('message', check=check)
+        a_list.append(msg.content)
+
+    submit_wait = True
+    while submit_wait:
+        await channel.send('Finished analysis: **type** "`submit`" send your results!')
+        msg = await bot.wait_for('message', check=check)
+        if "submit" in msg.content.lower():
+            submit_wait = False
+            answers = "\n".join(f'{a}. {b}' for a, b in enumerate(a_list, 1))
+            submit_msg = f'Application from: **{msg.author}**\n{answers}'
+            await submit_channel.send(submit_msg)
+
 bot.load_extension('cogs.ToggleCog')
 bot.load_extension('cogs.HelpCogs')
 bot.load_extension('cogs.MiscCog')
