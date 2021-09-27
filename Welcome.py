@@ -20,6 +20,7 @@ import traceback
 import sys
 from discord.ext.commands import Bot
 from discord_components import *
+from time import sleep
 
 intents = discord.Intents.default()
 intents.members = True
