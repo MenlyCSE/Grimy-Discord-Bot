@@ -20,6 +20,7 @@ class toggle(commands.Cog):
 
   @commands.command(name="event",description="Disable or Enable")
   @commands.has_permissions(administrator=True)
+  @commands.has_role("Event Manager")
   async def event(self, ctx, *, command):
 
       embed20 = discord.Embed(title = 'Events are currently closed! Winners will be announced!', colour = discord.Colour.red())
