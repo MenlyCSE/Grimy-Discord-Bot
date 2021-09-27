@@ -19,7 +19,6 @@ class toggle(commands.Cog):
     self.bot = bot
 
   @commands.command(name="event",description="Disable or Enable")
-  @commands.has_permissions(administrator=True)
   @commands.has_role("Event Manager")
   async def event(self, ctx, *, command):
 
