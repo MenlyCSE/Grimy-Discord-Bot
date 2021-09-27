@@ -318,7 +318,7 @@ q_list2 = [
 a_list2 = []
 
 
-@bot.command(aliases=['Modapp'])
+@bot.command(aliases=['Eventapp'])
 async def eventapp(ctx):
     a_list2 = []
     submit_channel = bot.get_channel(892132102366195742)
