@@ -301,11 +301,45 @@ async def modapp(ctx):
 
     submit_wait = True
     while submit_wait:
-        await channel.send('Finished analysis: **type** "`submit`" send your results!')
+        await channel.send('Finished analysis: **type** "`submit`" to send your results!')
         msg = await bot.wait_for('message', check=check)
         if "submit" in msg.content.lower():
             submit_wait = False
             answers = "\n".join(f'{a}. {b}' for a, b in enumerate(a_list, 1))
+            submit_msg = f'Application from: **{msg.author}**\n{answers}\n\n<@608326260271087616>'
+            await submit_channel.send(submit_msg)
+
+q_list2 = [
+    'You need to be at least a level 10 in the server. Are you level 10+ in the server**?**',
+    'You need to have a history of not causing trouble, have you caused any trouble**?**',
+    'You will be given directions on what to do. Are you responsible**?**'
+]
+
+a_list2 = []
+
+
+@bot.command(aliases=['Modapp'])
+async def modapp(ctx):
+    a_list2 = []
+    submit_channel = bot.get_channel(892132102366195742)
+    channel = await ctx.author.create_dm()
+
+    def check(m):
+        return m.content is not None and m.channel == channel
+
+    for question in q_list2:
+        sleep(.5)
+        await channel.send(question)
+        msg = await bot.wait_for('message', check=check)
+        a_list2.append(msg.content)
+
+    submit_wait = True
+    while submit_wait:
+        await channel.send('Finished analysis: **type** "`submit`" to send your results!')
+        msg = await bot.wait_for('message', check=check)
+        if "submit" in msg.content.lower():
+            submit_wait = False
+            answers = "\n".join(f'{a}. {b}' for a, b in enumerate(a_list2, 1))
             submit_msg = f'Application from: **{msg.author}**\n{answers}\n\n<@608326260271087616>'
             await submit_channel.send(submit_msg)
 
