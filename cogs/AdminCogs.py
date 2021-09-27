@@ -100,6 +100,7 @@ class AdminCogs(commands.Cog):
   @commands.command()
   @commands.Cog.listener()
   @commands.has_permissions(manage_channels=True)
+  @commands.has_role("Event Manager")
   async def lock(self, ctx, channel : discord.TextChannel=None):
     channel = channel or ctx.channel
     overwrite = channel.overwrites_for(ctx.guild.default_role)
@@ -111,6 +112,7 @@ class AdminCogs(commands.Cog):
   @commands.command()
   @commands.Cog.listener()
   @commands.has_permissions(manage_channels=True)
+  @commands.has_role("Event Manager")
   async def unlock(self, ctx, channel : discord.TextChannel=None):
     channel = channel or ctx.channel
     overwrite = channel.overwrites_for(ctx.guild.default_role)
