@@ -260,19 +260,6 @@ async def server(ctx):
     embed116 = discord.Embed().set_thumbnail(url='https://media.discordapp.net/attachments/788968211307692053/881630029119893504/L1.png?width=362&height=362').add_field(name="Server's created date:", value="```Sat, 01 May 2020, 02:00 PM EST```").add_field(name="Creator: Inculpable", value="```©️ Reserved rights, article 23 section 15.```")
     await ctx.send(embed=embed116)
         
-@bot.event
-async def on_member_join(member):
-    try:
-        channel = bot.get_channel(827603472467755008)
-        try:
-            random_words = ['Welcome', 'Hello & welcome', 'Greetings', 'Hey', 'Hello']
-            embed = discord.Embed(colour=discord.Colour.blue())
-            embed.set_author(name=f'{random.choice(random_words)} {member.name}!', icon_url=member.avatar_url)
-            await channel.send(embed=embed)
-        except Exception as e:
-            raise e
-    except Exception as e:
-        raise e
 
 
 q_list = [
