@@ -2,4 +2,7 @@
 
 A discord bot that uses `discord.py`'s library
 
-Contributor: https://github.com/MrLima001
+Contributors:
+https://github.com/MrLima001
+https://github.com/MenlyCSE
+
