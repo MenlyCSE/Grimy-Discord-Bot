@@ -1,6 +1,6 @@
 # GrimyBot
 
-A discord bot that uses `discord.py`'s library.
+A discord bot that uses `discord.py`'s library and manages the Grïmy Discord server... https://discord.gg/cJPCe9ZYPS
 
 
 ## Contributors:
