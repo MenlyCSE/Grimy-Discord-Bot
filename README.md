@@ -1,5 +1,5 @@
 # Grïmy - Discord Server Manager 
-An AI, created in 2021, made with Discord's python library.
+An AI, created in 2021, made with Discord's python library to manage the Grïmy Discord server https://discord.gg/cJPCe9ZYPS
 
 ![GrimyBotInfographic](https://github.com/MenlyCSE/GrimyBotCogs/assets/154091778/76c494e7-1a44-4b59-a03f-d43203a1b695)
 
