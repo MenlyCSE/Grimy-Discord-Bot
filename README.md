@@ -1,6 +1,5 @@
-# GrimyBot
-
-A discord bot that uses `discord.py`'s library and manages the Grïmy Discord server... https://discord.gg/cJPCe9ZYPS
+# Grïmy - Discord Server Manager 
+An AI, created in 2021, made with Discord's python library to manage the Grïmy Discord server
 
 
 ## Contributors:
@@ -9,7 +8,7 @@ A discord bot that uses `discord.py`'s library and manages the Grïmy Discord se
 @MrLima001 - [https://github.com/MrLima00](https://github.com/MrLima001)
 
 
-@MenlyCSE - [https://github.com/MenlyCSE](https://github.com/MenlyCSE)
+![303809894-576156e6-5019-4a7e-9df7-6369380502fd](https://github.com/MenlyCSE/Grimy-Discord-Bot/assets/154091778/f66869c5-94bc-43a5-89d5-2a50acaef72e)
 
 > [!NOTE]
 > Originally, users would contribute through discord messaging.
